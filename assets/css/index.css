@@ -102,7 +102,7 @@ a {
 }
 
 .banner {
-  background: url(../images/banner-background.png) center no-repeat;
+  background: url(../images/banner-background.webp) center no-repeat;
   background-size: cover;
   height: 100vh;
   display: flex;
