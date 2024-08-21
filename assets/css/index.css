@@ -1,0 +1,217 @@
+@font-face {
+  font-family: "Harukaze";
+  src: url(../fonts/harukaze.otf);
+}
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  overflow-x: hidden;
+}
+
+body {
+  font-size: 16px;
+  font-family: "Harukaze";
+  line-height: 1.5;
+  height: 100vh;
+  overflow: hidden;
+}
+
+ul,
+ol {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  margin: 0;
+  padding: 0;
+}
+
+img {
+  width: 100%;
+}
+
+a {
+  text-decoration: none;
+}
+
+.heading-block {
+  position: relative;
+}
+.heading-block .title {
+  font-size: 165px;
+  color: #a50000;
+  text-align: center;
+}
+
+.button-wrapper {
+  display: flex;
+  justify-content: unset;
+  align-items: center;
+  gap: 20px;
+}
+
+.button-link {
+  display: flex;
+  justify-content: unset;
+  align-items: center;
+  gap: unset;
+  position: relative;
+  padding: 10px 0;
+  width: 200px;
+}
+.button-link img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 0;
+}
+.button-link span {
+  font-size: 35px;
+  color: #fff;
+  position: relative;
+  z-index: 2;
+  display: block;
+  margin-left: 30px;
+  transition: all ease 0.3s;
+}
+.button-link:hover span {
+  color: #a50000;
+}
+
+.banner {
+  background: url(../images/banner-background.png) center no-repeat;
+  background-size: cover;
+  height: 100vh;
+  display: flex;
+  justify-content: unset;
+  align-items: center;
+  gap: unset;
+  position: relative;
+}
+.banner .banner-wrapper {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  gap: 40px;
+}
+.banner .video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 0;
+  mix-blend-mode: screen;
+}
+.banner .video video {
+  height: 100%;
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.banner .banner-image {
+  max-width: 55vw;
+  width: 100%;
+  position: absolute;
+  bottom: 0;
+  left: -100px;
+  z-index: 1;
+}
+.banner .banner-image img {
+  width: 100%;
+}
+.banner .banner-content {
+  display: flex;
+  justify-content: unset;
+  align-items: center;
+  gap: unset;
+  flex-direction: column;
+  margin-left: auto;
+  width: -moz-fit-content;
+  width: fit-content;
+}
+.banner .heading-block {
+  margin-bottom: 40px;
+}
+.banner .heading-block .title {
+  text-transform: uppercase;
+  display: block;
+  width: 100%;
+  text-align: center;
+  animation: fadeIn ease 2s 1s;
+  animation-fill-mode: forwards;
+  opacity: 0;
+}
+
+@media only screen and (max-width: 1199px) {
+  .banner .banner-content {
+    width: 100%;
+  }
+  .banner .banner-image {
+    z-index: 0;
+    max-width: 75vw;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+}
+@media only screen and (max-width: 991px) {
+  .banner .banner-image {
+    max-width: unset;
+    width: auto;
+    height: 100vh;
+  }
+  .banner .banner-image img {
+    width: auto;
+    height: 100%;
+  }
+}
+@media only screen and (max-width: 576px) {
+  .button-wrapper {
+    flex-direction: column;
+  }
+  .banner .heading-block .title {
+    font-size: 120px;
+  }
+  .banner .banner-image {
+    top: 0;
+    bottom: initial;
+    height: unset;
+    width: 100%;
+  }
+  .banner .banner-image img {
+    width: 100%;
+    height: auto;
+  }
+}
+@media only screen and (max-width: 480px) {
+  .banner .heading-block .title {
+    font-size: 90px;
+  }
+  .banner .banner-image {
+    top: initial;
+    bottom: 0;
+  }
+}
